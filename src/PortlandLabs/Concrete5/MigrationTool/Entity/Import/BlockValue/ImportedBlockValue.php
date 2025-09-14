@@ -15,19 +15,41 @@ class ImportedBlockValue extends BlockValue
     /**
      * @ORM\Column(type="text", nullable=true)
      */
+    protected $originalValue;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
     protected $value;
 
-    public function getValue()
+    public function getOriginalValue(): ?string
+    {
+        return $this->originalValue;
+    }
+
+    /**
+     * @return $this
+     */
+    public function setOriginal(?string $value): self
+    {
+        $this->originalValue = $value;
+
+        return $this;
+    }
+
+    public function getValue(): ?string
     {
         return $this->value;
     }
 
     /**
-     * @param mixed $value
+     * @return $this
      */
-    public function setValue($value)
+    public function setValue(?string $value): self
     {
         $this->value = $value;
+
+        return $this;
     }
 
     public function getFormatter()
