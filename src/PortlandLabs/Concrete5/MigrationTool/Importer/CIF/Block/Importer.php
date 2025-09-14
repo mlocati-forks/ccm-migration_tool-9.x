@@ -10,10 +10,11 @@ class Importer extends AbstractImporter
     public function parse(\SimpleXMLElement $node)
     {
         $value = new ImportedBlockValue();
+        $xml = (string) $node->asXML();
 
         return $value
-            ->setOriginal((string) $node->asXML())
-            ->setValue((string) $node->asXML())
+            ->setOriginal($xml)
+            ->setValue($xml)
         ;
     }
 }

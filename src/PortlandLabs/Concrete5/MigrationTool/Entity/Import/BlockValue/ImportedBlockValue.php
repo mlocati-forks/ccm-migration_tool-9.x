@@ -1,7 +1,7 @@
 <?php
 namespace PortlandLabs\Concrete5\MigrationTool\Entity\Import\BlockValue;
-use Doctrine\ORM\Mapping as ORM;
 
+use Doctrine\ORM\Mapping as ORM;
 use PortlandLabs\Concrete5\MigrationTool\Batch\Formatter\Block\ImportedFormatter;
 use PortlandLabs\Concrete5\MigrationTool\Inspector\Block\CIFInspector;
 use PortlandLabs\Concrete5\MigrationTool\Publisher\Block\CIFPublisher;
